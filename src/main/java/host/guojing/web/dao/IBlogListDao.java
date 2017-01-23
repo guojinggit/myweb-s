@@ -11,5 +11,5 @@ import java.util.List;
 @Repository
 public interface IBlogListDao {
 
-    List<BlogTitle> getBlogList();
+    List<BlogTitle> getBlogList(String table_name);
 }

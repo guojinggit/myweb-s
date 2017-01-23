@@ -6,7 +6,7 @@ package host.guojing.web.entity;
 public class BlogTitle {
     private int id;
     private String inserttime;
-    private String date;
+    private String blogdate;
     private String title;
     private String description;
 
@@ -44,12 +44,12 @@ public class BlogTitle {
 
     private String extend;
 
-    public String getDate() {
-        return date;
+    public String getBlogdate() {
+        return blogdate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setBlogdate(String date) {
+        this.blogdate = date;
     }
 
     public String getTitle() {

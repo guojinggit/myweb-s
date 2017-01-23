@@ -3,8 +3,8 @@
 <!-- namespace必须指向Dao接口 -->
 <mapper namespace="host.guojing.web.dao.IBlogListDao">
 
-	<select id="getBlogList" resultType="host.guojing.web.entity.BlogTitle">
-		select id,inserttime,'date', title, description,extend  from myblog_2016;
+	<select id="getBlogList" resultType="host.guojing.web.entity.BlogTitle" parameterType="java.lang.String" >
+		select id,inserttime,blogdate, title, description, extend  from ${_parameter};
 	</select>
 	
 

@@ -1,7 +1,7 @@
 package host.guojing.web.service;
 
-import host.guojing.web.entity.BlogTitle;
 import host.guojing.web.dao.IBlogListDao;
+import host.guojing.web.entity.BlogTitle;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -17,7 +17,7 @@ public class BlogListService {
     @Resource
     IBlogListDao blogListDao;
 
-    public List<BlogTitle> getBlogList() {
-        return blogListDao.getBlogList();
+    public List<BlogTitle> getBlogList(String table_name) {
+        return blogListDao.getBlogList(table_name);
     }
 }

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%
 	request.setAttribute("domain", "http://localhost/bloglist.html");
@@ -46,22 +47,20 @@ text-decoration:none;
 <body>
 
 <div class="divAll">
-	<h1>2016</h1>
-	xxx ${test}
-	<s:iterator value="#request.blogTitleList">
-		<tr>
-			<td><s:property value="title"/></td>
-			<td><s:property value="date"/></td>
-		</tr>
-	</s:iterator>
-	<c:forEach items="${requestScope.blogTitleList}" var="item">
-		<tr>
-			<td>${item.date }</td>
-
-		</tr>
+	<h1>2017</h1>
+	<c:forEach items="${myblog_2017}" var="item">
+		<a class="everyHtml" href="blog.html?id=${item.id}&name=2017" title="">${item.blogdate }  &nbsp;&nbsp;${item.title }</a>
+		<br><br>
 	</c:forEach>
-	<a class="everyHtml" href="20161009.html" title="">2016-10-09  &nbsp;&nbsp;勇气</a> <br><br>
-	<a class="everyHtml" href="20161009.html" title="">2016-10-09  &nbsp;&nbsp;勇气</a> <br><br>
+	<br>
+	<h1>2016</h1>
+	<c:forEach items="${myblog_2016}" var="item">
+		<a class="everyHtml" href="blog.html?id=${item.id}&name=2016" title="">${item.blogdate }  &nbsp;&nbsp;${item.title }</a>
+		<br><br>
+	</c:forEach>
+
+	<%--<a class="everyHtml" href="20161009.html" title="">2016-10-09  &nbsp;&nbsp;勇气</a> <br><br>--%>
+	<%--<a class="everyHtml" href="20161009.html" title="">2016-10-09  &nbsp;&nbsp;勇气</a> <br><br>--%>
 	<br><br>
 	<a  href="../index.html">-->back<--</a>
 </div>

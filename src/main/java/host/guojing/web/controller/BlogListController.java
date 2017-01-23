@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,11 +22,22 @@ public class BlogListController {
     @RequestMapping("bloglist")
     public String getBlogList(HttpServletRequest request){
         System.out.println("coming");
-        List<BlogTitle> titleList = blogListService.getBlogList();
-        System.out.println(titleList.get(0).getTitle());
-        System.out.println(titleList.size());
-        request.setAttribute("blogTitleList", titleList);
-        request.setAttribute("test", "testttt");
+        List<String> strList = new ArrayList<String>();
+        strList.add("myblog_2016");
+        strList.add("myblog_2017");
+        for (String table_name : strList){
+            List<BlogTitle> titleList = blogListService.getBlogList(table_name);
+            //处理一下时间的格式
+            for(BlogTitle title : titleList){
+                String date = title.getBlogdate();
+                String year = date.substring(0,4);
+                String month = date.substring(4,6);
+                String day = date.substring(6,8);
+                title.setBlogdate(year + "-" + month + "-" + day);
+            }
+            request.setAttribute(table_name, titleList);
+        }
+
         return "jsp/blog/bloglist.jsp";
     }
 }
