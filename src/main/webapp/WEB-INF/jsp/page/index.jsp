@@ -105,7 +105,7 @@
 								if(i == currPage){
 									%><span class="current"><%=currPage %></span><%
 								}else{
-									%><a href="index.html?page=<%=i %>"><%=i %></a><%
+									%><a href="../../../index.jsp?page=<%=i %>"><%=i %></a><%
 								}
 							}
 						%>

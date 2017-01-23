@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="host.guojing.web.dao.IBlogListDao">
+
+	<select id="getBlogList" resultType="host.guojing.web.entity.BlogTitle">
+		select id,inserttime,'date', title, description,extend  from myblog_2016;
+	</select>
+	
+
+	
+</mapper> 
