@@ -62,7 +62,9 @@ text-decoration:none;
 	<%--<a class="everyHtml" href="20161009.html" title="">2016-10-09  &nbsp;&nbsp;勇气</a> <br><br>--%>
 	<%--<a class="everyHtml" href="20161009.html" title="">2016-10-09  &nbsp;&nbsp;勇气</a> <br><br>--%>
 	<br><br>
-	<a  href="../index.html">-->back<--</a>
+	<a  href="index.html">go home</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="javascript:history.go(-1);">go back</a>
 </div>
 
 <div class="divBotom">

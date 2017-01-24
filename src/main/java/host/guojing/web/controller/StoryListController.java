@@ -14,17 +14,17 @@ import java.util.List;
  * Created by Administrator on 2017/1/15.
  */
 @Controller
-public class BlogListController {
+public class StoryListController {
 
     @Resource
     BlogListService blogListService;
 
-    @RequestMapping("bloglist")
+    @RequestMapping("storylist")
     public String getBlogList(HttpServletRequest request){
         System.out.println("coming");
         List<String> strList = new ArrayList<String>();
-        strList.add("myblog_2016");
-        strList.add("myblog_2017");
+        strList.add("mystory_2016");
+        strList.add("mystory_2017");
         for (String table_name : strList){
             List<BlogTitle> titleList = blogListService.getBlogList(table_name);
             //处理一下时间的格式
@@ -38,6 +38,6 @@ public class BlogListController {
             request.setAttribute(table_name, titleList);
         }
 
-        return "/WEB-INF/jsp/blog/bloglist.jsp";
+        return "/WEB-INF/jsp/story/storyList.jsp";
     }
 }

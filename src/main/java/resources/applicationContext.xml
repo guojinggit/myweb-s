@@ -60,10 +60,14 @@
         <property name="defaultAutoCommit" value="false" />
     </bean>
 
+
+    <!--邮箱配置-->
+    <import resource="classpath*:/spring-mail.xml"></import>
+
     <!-- production环境 -->
     <beans profile="production">
         <context:property-placeholder ignore-unresolvable="true" file-encoding="utf-8" 
-        location="classpath:config.properties,classpath:jdbc.properties" />
+        location="classpath:config.properties,classpath:jdbc.properties,classpath:placeholder.properties" />
     </beans>
 
 </beans>

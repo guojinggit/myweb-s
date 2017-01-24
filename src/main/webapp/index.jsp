@@ -54,15 +54,15 @@
 							<ul>
 								<li><a href="bloglist.html" class="fa fa-coffee"><span>博客</span></a></li>
 								<li><a  class="fa fa-lock" name="lockInput" id="lockInput" onclick="onClickLock()" ><span>text</span></a> </li>
-								<li><a href="??" class="fa fa-heart-o"><span>Github</span></a></li>
-								<li><a href="mailto:495389585@qq.com?subject=网站邮件&body=该内容将直接发给该网站开发维护本人" class="fa fa-envelope-o"><span>Email</span></a></li>
+								<li><a href="storylist.html" class="fa fa-heart-o"><span>Github</span></a></li>
+								<li><a href="mail.jsp" class="fa fa-envelope-o"><span>Email</span></a></li>
 							</ul>
 						</nav>
 					</header>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<span class="copyright">&copy; Design: thanks html5up.net,codepen.in</span>
+						<span class="copyright">&copy; materials from internet</span>
 					</footer>
 				
 			</div>

@@ -12,19 +12,19 @@ import javax.servlet.http.HttpServletRequest;
  */
 
 @Controller
-public class BlogController {
+public class StoryController {
 
     @Resource
     BlogService blogService;
 
-    @RequestMapping("blog")
+    @RequestMapping("story")
     public String getBlog(HttpServletRequest request){
         String id = request.getParameter("id");
         String table_name = request.getParameter("name");
-        table_name = "myblog_" + table_name;
+        table_name = "mystory_" + table_name;
 
         String blog = blogService.getBlog(table_name, Integer.parseInt(id));
         request.setAttribute("blog", blog);
-        return "/WEB-INF/jsp/blog/blog.jsp";
+        return "/WEB-INF/jsp/story/story.jsp";
     }
 }
